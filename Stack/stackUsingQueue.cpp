@@ -5,35 +5,35 @@
 //             -> Swap(q1,q2).
 // for pop(),top(): -> do operations on q1.
           
-// class MyStack {
-//     queue<int> q1;
-//     queue<int> q2;
-// public:
-//     MyStack() {  }
+class MyStack {
+    queue<int> q1;
+    queue<int> q2;
+public:
+    MyStack() {  }
     
-//     void push(int x) {
-//         q2.push(x);
-//         while(!q1.empty()){
-//             q2.push(q1.front());
-//             q1.pop();
-//         }
-//         swap(q1,q2);
-//     }
+    void push(int x) {
+        q2.push(x);
+        while(!q1.empty()){
+            q2.push(q1.front());
+            q1.pop();
+        }
+        swap(q1,q2);
+    }
     
-//     int pop() {
-//         int poped = q1.front();
-//         q1.pop();
-//         return poped;
-//     }
+    int pop() {
+        int poped = q1.front();
+        q1.pop();
+        return poped;
+    }
     
-//     int top() {
-//         return q1.front();
-//     }
+    int top() {
+        return q1.front();
+    }
     
-//     bool empty() {
-//         return q1.empty();
-//     }
-// };
+    bool empty() {
+        return q1.empty();
+    }
+};
 
 // Using 1 queue:
 // -> push elem to q.
